@@ -1627,3 +1627,5 @@ int main() {
     return EXIT_SUCCESS;
 }
 ```
+THANKS for being still here to read this, it was a really tough project that forced me to learn  alot of things but it has great use and sharing it to everyone and trying to
+simplify it was very fun. Use those technique wisely. I must warn you i do not support any kind of cheating and my bypass wil be exposed in a few week and then will probably don't work anymore, don't cheat guys it's not worth it.
