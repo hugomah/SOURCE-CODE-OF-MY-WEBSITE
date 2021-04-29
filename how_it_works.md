@@ -263,11 +263,22 @@ GetHandle.hpp:
 [GetHandle.hpp.txt](https://github.com/whitecatOwO/handle-hijacking-user-mode-multi-AC-bypass-EAC-BE-tested-/files/6395768/GetHandle.hpp.txt)
 
 spinlock.asm:
+```C++
 To add and include an assembly file for compiling, right click your project in Visual Studio, then go on Build Dependencies and click Build Customizations. Tick the checkbox "masm(.targets, .props) and click OK. Right click Source Files in your project, Add, New Item. Select C++ File and name it "spinlock.asm" and click Add. Right click spinlock.asm in the Source Files, click Properties. Set "Excluded from Build" to No, and set "Item Type" to "Microsoft Macro Assembler
 
 Code:
-[spinlock.asm.txt](https://github.com/whitecatOwO/handle-hijacking-user-mode-multi-AC-bypass-EAC-BE-tested-/files/6395772/spinlock.asm.txt)
-
+.code
+ 
+SpinLockByte proc
+SpinLock:
+	pause ; tells the CPU we're spinning
+	cmp dl, [rcx]
+	jnz SpinLock
+	ret
+SpinLockByte endp
+ 
+end
+```
 
 Usage:
 
