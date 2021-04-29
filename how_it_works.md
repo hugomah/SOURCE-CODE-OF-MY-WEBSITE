@@ -12,14 +12,14 @@ Intermediate users will certainly benefit the most out of it, since I make use a
 Advanced users might eventually get a few interesting things, but don't get too hyped and keep in mind that nothing in here is ground-breaking, it is more a usage of various known technique to push stealth closer to the limits of what user-mode only allows.
 A few functions might be of interest, you'll be the judge.
 
-What is this bypass?
+##What is this bypass?##
 This bypass use handle hijacking techniques allowing to read and write a target process memory.
 It is designed with external cheats in mind.
 The performance is, I think, as good as it can get in a handle hijacking bypass (shared memory, minimalist IPC protocol, direct call to Zw functions, very little overhead).
 It is written with stealth as a main objective, with a separate bypass installer binary and a minimalist bypass client class to integrate in your cheat for more safety.
 However, we are unfortunately bound to the limits of what user-mode allow us to do with this bypass, and with anti-cheats operating at kernel level, we have a disadvantage, and with this bypass being release publicly they will know what to look for, so be creative and sneaky if you consider using it.
 
-Compatibility
+##Compatibility##
 Tested working on Windows 10 x64 and Windows 7 x64 (the only thing that changes between the 2 versions for these 2 OS is the function to get the handle ID, it needs a little adjustment for Windows 7)
 It probably works on Windows 8 x64, but non tested.
 I wrote this bypass for x64 OSes only (more specifically, for x64 abused processes), it can work for x86 but you'll have to adapt the shellcode and a few other things, otherwise I suggest that you join us in the x64 master race 
